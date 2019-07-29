@@ -1,0 +1,9 @@
+README.md
+nepali_roman
+setup.py
+nepali_roman/__init__.py
+nepali_roman/romanize.py
+nepali_roman.egg-info/PKG-INFO
+nepali_roman.egg-info/SOURCES.txt
+nepali_roman.egg-info/dependency_links.txt
+nepali_roman.egg-info/top_level.txt
