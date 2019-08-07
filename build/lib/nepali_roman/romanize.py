@@ -1,7 +1,9 @@
 import json
+import os
 
+print(os.system('ls'))
 
-with open('characters_map.json') as f:
+with open('nepali_roman/characters_map.json') as f:
     d2r_dict = json.load(f)
     
     
