@@ -1,12 +1,12 @@
 Metadata-Version: 1.1
 Name: nepali-roman
-Version: 0.5
+Version: 0.6
 Summary: Convert Nepali text to roman English
 Home-page: https://github.com/Suraj1127/nepali-roman
 Author: Suraj Regmi
 Author-email: regmi125@gmail.com
 License: UNKNOWN
-Download-URL: https://github.com/Suraj1127/nepali-roman/archive/0.5.tar.gz
+Download-URL: https://github.com/Suraj1127/nepali-roman/archive/0.6.tar.gz
 Description: Convert Nepali text to roman English
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
