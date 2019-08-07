@@ -1,1 +1,2 @@
 nepali_roman
+romanize
