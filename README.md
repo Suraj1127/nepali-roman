@@ -28,7 +28,35 @@ Import the `nepali_roman` module using the following command.
 ```python
 import nepali_roman as nr
 ```
-The `nepali_roman` module has two functions: `romanize_text` and `romanize`.
+The `nepali_roman` module has three functions: `is_devanagari`, `romanize_text` and `romanize`.
+
+### `is_devanagari`
+This function checks if the text is in Devanagari format.
+
+**Detail description**:
+In the text, it ignores all the punctuations, white spaces and other non-alphanumeric characters and then counts the
+number of devanagari characters. If the number of devanagari characters is more than or equal to 50% of the stripped
+text, the function deems the text devanagari, otherwise not.
+
+Syntax:
+```python
+>>> nr.is_devanagari(text)
+```
+
+Example:
+```python
+>>> import nepali_roman as nr
+>>> nr.is_devanagari("नगरपालिका")
+    True
+
+>>> nr.is_devanagari("surajपालिक")
+    False
+
+>>> nr.is_devanagari("suraj")
+    False
+```
+    
+    
 
 ### `romanize_text`
 This function can be used to romanize the Nepali text to English.

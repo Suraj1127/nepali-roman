@@ -1,4 +1,5 @@
-import json
+#/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 from collections import OrderedDict
 
@@ -398,16 +399,65 @@ d2r_dict=OrderedDict([
 ('ौ','au'),
     ])
 
+
+def is_devanagari(text):
+    """
+    This function checks if the text is in Devanagari format.
+
+    Detail description:
+    In the text, it ignores all the punctuations, white spaces and other non-alphanumeric characters and then counts the
+    number of devanagari characters. If the number of devanagari characters is more than or equal to 50% of the stripped
+    text, the function deems the text devanagari, otherwise not.
+
+    Syntax:
+    >>> nr.is_devanagari(text)
+
+    Example:
+        >>> import nepali_roman as nr
+        >>> nr.is_devanagari("नगरपालिका")
+            True
+
+        >>> nr.is_devanagari("surajपालिक")
+            False
+
+        >>> nr.is_devanagari("suraj")
+            False
+    """
+    text = "".join(i for i in text if i.isalnum())
+    return (sum(True for i in text if ord(i) in range(2304, 2432)) / len(text)) >= 0.5
     
     
 def romanize_text(text):
+    """
+    This function can be used to romanize the Nepali text to English.
+
+    Syntax:
+    >>> nr.romanize_text(nepali_text)
+
+    Example:
+        >>> import nepali_roman as nr
+        >>> nr.romanize_text("नगरपालिका")
+            nagarapaalikaa
+    """
     if type(text) == float:
         return
     for key,value in d2r_dict.items():
         text=text.replace(key,value)  
     return text
 
+
 def romanize(in_file, out_file):
+    """
+    This function takes Nepali text file as an input and saves the romanized text in specified output file.
+
+    Syntax:
+    >>> nr.romanize(input_file_path, output_file_path)
+
+    Example:
+        >>> import nepali_roman as nr
+        >>> nr.romanize('nepali.txt', 'romanized_english.txt')
+        # this takes Nepali text file nepali.txt and stores romanized English in the file romanized_english.txt
+    """
     with open(in_file) as f:
         text = f.read()
     
