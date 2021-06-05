@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='nepali_roman',
-    version='1.0.1',
+    version='1.1',
     author="Suraj Regmi",
     author_email="regmi125@gmail.com",
     description="Convert Nepali text to roman English",
